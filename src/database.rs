@@ -1,13 +1,13 @@
 use crate::history_item::HistoryItem;
 use anyhow::Result;
-use chrono::prelude::{DateTime, TimeZone};
+use chrono::prelude::TimeZone;
 use chrono::Utc;
 use itertools::Itertools;
 use log::debug;
 use log::info;
 use rusqlite::{params, Connection, Row, Transaction};
 use std::path::Path;
-use std::time::{Duration, UNIX_EPOCH};
+use std::time::Duration;
 
 pub trait Database {
     fn save(&mut self, h: &HistoryItem) -> Result<()>;
@@ -76,8 +76,6 @@ impl Sqlite {
     }
 
     fn setup_db(conn: &Connection) -> Result<usize> {
-        debug!("running sqlite database setup");
-
         let history_table = r#"
         CREATE TABLE IF NOT EXISTS history_items (
             history_id     INTEGER PRIMARY KEY AUTOINCREMENT,

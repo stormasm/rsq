@@ -105,18 +105,15 @@ fn main(args: Args) -> Result<(), anyhow::Error> {
     ])
     .unwrap();
 
-    debug!("starting main");
     start(args)?;
 
     Ok(())
 }
 
 fn start(args: Args) -> Result<(), anyhow::Error> {
-    debug!("starting second_attempt");
-
     let db_path = PathBuf::from("my_hizzy.db");
     // PathBuf::from("C:\\Users\\dschroeder\\source\\repos\\forks\\sql\\hiztery\\hizzy.db");
-    let mut sqlite = match Sqlite::new(db_path, database::SqlLogMode::Trace) {
+    let mut sqlite = match Sqlite::new(db_path, database::SqlLogMode::Disabled) {
         Ok(r) => r,
         Err(e) => return Err(e),
     };
@@ -249,7 +246,6 @@ fn start(args: Args) -> Result<(), anyhow::Error> {
         }
         Some(HizteryCmd::Count {}) => {
             // cargo run -- count
-            debug!("Counting history items.");
             let result = sqlite.history_count()?;
             debug!("Found [{}] history items.", result);
         }
