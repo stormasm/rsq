@@ -68,3 +68,9 @@ pub struct HistoryItem {
 | Range  | return historyitems from/to date range                                                             | --from, --to             | cargo run -- range -f "2021-07-21" -t "2021-07-25"             |
 | Before | return historyitems from datetime with count limit                                                 | --from, --count          | cargo run -- before -f "2021-07-21" -c 25                      |
 | All    | just return everything                                                                             | N/A                      | cargo run -- all                                               |
+
+### Actual commands
+
+```rust
+cargo run -- insert --text "happy birthday" --rows_to_insert 1
+```
