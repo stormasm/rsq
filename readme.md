@@ -84,3 +84,5 @@ Note the single quotes...
 ```rust
 select * from history_items where command_line like '%rick%';
 ```
+
+* .mode column <- this will show your columns when you query
