@@ -85,4 +85,6 @@ Note the single quotes...
 select * from history_items where command_line like '%rick%';
 ```
 
-- .mode column <- this will show your columns when you query
+```rust
+.mode column = this will show your columns when you query
+```
