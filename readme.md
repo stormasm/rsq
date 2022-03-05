@@ -74,3 +74,13 @@ pub struct HistoryItem {
 ```rust
 cargo run -- insert --text "happy birthday" --rows_to_insert 1
 ```
+
+### Sqlite3 commands
+
+[Like](https://www.sqlitetutorial.net/sqlite-like/)
+
+Note the single quotes...
+
+```rust
+select * from history_items where command_line like '%rick%';
+```
