@@ -111,8 +111,7 @@ fn main(args: Args) -> Result<(), anyhow::Error> {
 }
 
 fn start(args: Args) -> Result<(), anyhow::Error> {
-    let db_path = PathBuf::from("my_hizzy.db");
-    // PathBuf::from("C:\\Users\\dschroeder\\source\\repos\\forks\\sql\\hiztery\\hizzy.db");
+    let db_path = PathBuf::from("dbt00.db");
     let mut sqlite = match Sqlite::new(db_path, database::SqlLogMode::Disabled) {
         Ok(r) => r,
         Err(e) => return Err(e),
