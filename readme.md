@@ -72,7 +72,7 @@ pub struct HistoryItem {
 ### Actual commands
 
 ```rust
-cargo run -- insert --text "happy birthday" --rows_to_insert 1
+cargo run -- insert --text "happy birthday pedro" --rows_to_insert 1
 ```
 
 ```rust
