@@ -438,13 +438,7 @@ impl Database for Sqlite {
         let mut stmt = self.prepare(
             format!(
                 "select * from history_items h
-            where command like ?1 || '%'
-            and timestamp = (
-                    select max(timestamp) from history_items
-                    where h.command = history_items.command
-                )
-            order by timestamp desc {}",
-                limit.clone()
+            where command_line like ?1 || '%' ",
             )
             .as_str(),
         )?;

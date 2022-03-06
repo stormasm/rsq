@@ -76,7 +76,7 @@ cargo run -- insert --text "happy birthday" --rows_to_insert 1
 ```
 
 ```rust
-cargo run -- search -m p -q "pedro"
+cargo run -- search -m p -q "%pedro%"
 ```
 
 ### Sqlite3 commands
