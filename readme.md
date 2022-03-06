@@ -90,5 +90,9 @@ select * from history_items where command_line like '%rick%';
 ```
 
 ```rust
+.tables = this will show you the table names
+```
+
+```rust
 .mode column = this will show your columns when you query
 ```
