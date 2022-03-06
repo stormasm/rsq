@@ -75,6 +75,10 @@ pub struct HistoryItem {
 cargo run -- insert --text "happy birthday" --rows_to_insert 1
 ```
 
+```rust
+cargo run -- search -m p -q "pedro"
+```
+
 ### Sqlite3 commands
 
 [Like](https://www.sqlitetutorial.net/sqlite-like/)
